@@ -11,9 +11,9 @@ stage('build') {
     }
 }
 
-stage('build docker image') {
+stage('build package') {
     node {
-        mvn "clean package docker:build -DskipTests"
+        mvn "clean install -DskipTests"
     }
 }
 
